@@ -1,21 +1,14 @@
 <template>
     <div class="post-card">
         <div class="col-12">
-            <img class="img-fluid" :src="postProp.img" alt="post image">
-            <!-- <router-link :to="{ name: 'Project', params: { projectId: projectProp.id } }">
-                <img class="img-fluid" :src="projectProp.img" alt="project image">
-            </router-link> -->
+            <router-link :to="{ name: 'Post', params: { postId: postProp.id } }">
+                <img class="img-fluid" :src="postProp.img" alt="post image">
+            </router-link>
 
         </div>
         <div class="col-12">
             <p class="m-2 fs-4 post-name text-center text-dark">{{ postProp.title }}</p>
-            <!-- <p class="m-2">{{ postProp.body.shortDescription }}</p> -->
-            <p class="m-2 p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia vero sit dolor dicta
-                optio
-                illo
-                aliquam veniam iste ad animi accusamus modi magni, libero veritatis repellendus laudantium quae at! Porro
-                cumque, corrupti est vero totam iste illo voluptas, mollitia veniam saepe officia?</p>
-
+            <p class="m-2 p-4">{{ postProp.shortBody }}...</p>
         </div>
 
     </div>

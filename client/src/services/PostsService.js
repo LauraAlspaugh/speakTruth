@@ -16,5 +16,12 @@ async createPost(postData){
     AppState.posts.push(newPost)
     return newPost
 }
+async getPostById(postId){
+ AppState.activePost = null
+ const res = await api.get(`api/posts/${postId}`)
+logger.log('getting post by id', res.data)
+AppState.activePost = new Post(res.data)
+}
+
 }
 export const postsService = new PostsService()

@@ -51,6 +51,6 @@ export default {
 }
 
 .sub-truth {
-  font-family: Arial (sans-serif);
+  font-family: 'Courier New', Courier, monospace;
 }
 </style>

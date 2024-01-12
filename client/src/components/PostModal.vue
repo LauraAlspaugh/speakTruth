@@ -36,7 +36,7 @@
                             </select>
                         </div> -->
 
-                        <button type="submit" class="btn btn-dark-outline">Submit</button>
+                        <button type="submit" class="btn btn-outline-dark">Submit</button>
                     </form>
 
                 </div>
