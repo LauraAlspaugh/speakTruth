@@ -49,6 +49,7 @@ img {
     border-radius: 7px;
     height: 300px;
     object-fit: cover;
+    position: center;
 }
 
 .post-name {

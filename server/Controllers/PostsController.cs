@@ -42,4 +42,34 @@ public class PostsController : ControllerBase
             return BadRequest(error.Message);
         }
     }
+    [HttpGet("{postId}")]
+    public ActionResult<Post> GetPostById(int postId)
+    {
+        try
+        {
+            Post post = _postsService.GetPostById(postId);
+            return Ok(post);
+        }
+        catch (Exception error)
+        {
+
+            return BadRequest(error.Message);
+        }
+    }
+    [Authorize]
+    [HttpPut("{postId}")]
+    public async Task<ActionResult<Post>> EditPost(int postId, [FromBody] Post postData)
+    {
+        try
+        {
+            Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
+            Post post = _postsService.EditPost(postId, userInfo.Id, postData);
+            return Ok(post);
+        }
+        catch (Exception error)
+        {
+
+            return BadRequest(error.Message);
+        }
+    }
 }

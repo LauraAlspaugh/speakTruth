@@ -1,5 +1,6 @@
 
 
+
 namespace speakTruth.Services;
 public class PostsService
 {
@@ -13,6 +14,30 @@ public class PostsService
     internal Post CreatePost(Post postData)
     {
         Post post = _postsRepository.CreatePost(postData);
+        return post;
+    }
+
+    internal Post EditPost(int postId, string id, Post postData)
+    {
+        Post post = GetPostById(postId);
+        if (post.CreatorId != id)
+        {
+            throw new Exception("not your post to edit!");
+        }
+        post.Img = postData.Img ?? post.Img;
+        post.Title = postData.Title ?? post.Title;
+        post.Body = postData.Body ?? post.Body;
+        _postsRepository.EditPost(post);
+        return post;
+    }
+
+    internal Post GetPostById(int postId)
+    {
+        Post post = _postsRepository.GetPostById(postId);
+        if (post == null)
+        {
+            throw new Exception("not a valid post id");
+        }
         return post;
     }
 
