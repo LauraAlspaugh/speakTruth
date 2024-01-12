@@ -8,9 +8,11 @@
 
         </div>
         <div class="col-12">
-            <p class="m-2 fs-4 post-name text-center">{{ postProp.title }}</p>
+            <p class="m-2 fs-4 post-name text-center text-dark">{{ postProp.title }}</p>
             <!-- <p class="m-2">{{ postProp.body.shortDescription }}</p> -->
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia vero sit dolor dicta optio illo
+            <p class="m-2 p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia vero sit dolor dicta
+                optio
+                illo
                 aliquam veniam iste ad animi accusamus modi magni, libero veritatis repellendus laudantium quae at! Porro
                 cumque, corrupti est vero totam iste illo voluptas, mollitia veniam saepe officia?</p>
 
@@ -40,7 +42,6 @@ export default {
 .post-card {
     background-color: white;
     border-radius: 7px;
-    margin-bottom: 7px;
     box-shadow: 3px 2px 3px gray;
 }
 
@@ -53,7 +54,7 @@ img {
 }
 
 .post-name {
-    color: #3F7D75;
+
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 </style>

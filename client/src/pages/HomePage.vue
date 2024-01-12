@@ -7,7 +7,7 @@
       </div>
     </section>
     <section class="row justify-content-evenly">
-      <div v-for="post in posts" :key="post.id" class="col-7">
+      <div v-for="post in posts" :key="post.id" class="col-md-7 col-12 mb-5">
         <PostCard :postProp="post" />
       </div>
     </section>
