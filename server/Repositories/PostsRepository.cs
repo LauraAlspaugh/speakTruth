@@ -1,4 +1,5 @@
 
+
 namespace speakTruth.Repositories;
 public class PostsRepository
 {
@@ -28,5 +29,22 @@ public class PostsRepository
              return post;
          }, postData).FirstOrDefault();
         return post;
+    }
+
+    internal List<Post> GetPosts()
+    {
+        string sql = @"
+    SELECT 
+    pos.*,
+    acc.*
+    FROM posts pos
+    JOIN accounts acc ON pos.creatorId = acc.id
+    ";
+        List<Post> posts = _db.Query<Post, Account, Post>(sql, (post, account) =>
+        {
+            post.Creator = account;
+            return post;
+        }).ToList();
+        return posts;
     }
 }

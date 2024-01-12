@@ -28,4 +28,18 @@ public class PostsController : ControllerBase
             return BadRequest(error.Message);
         }
     }
+    [HttpGet]
+    public ActionResult<List<Post>> GetPosts()
+    {
+        try
+        {
+            List<Post> posts = _postsService.GetPosts();
+            return Ok(posts);
+        }
+        catch (Exception error)
+        {
+
+            return BadRequest(error.Message);
+        }
+    }
 }

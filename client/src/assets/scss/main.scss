@@ -10,10 +10,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  // background-color: var(--bs-page);
-  background-image: url("https://plus.unsplash.com/premium_photo-1673029926919-3ea3dfbdd5bf?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHdhbGwlMjBwYXBlcnxlbnwwfHwwfHx8MA%3D%3D");
+  // background-color: var(--bs-page);https://images.unsplash.com/photo-1521728935364-00584c026397?w=800&auto
+  background-image: url("https://images.unsplash.com/photo-1533038590840-1cde6e668a91?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGFlc3RoZXRpYyUyMHdhbGxwYXBlciUyMGdyZWVuZXJ5fGVufDB8fDB8fHww");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
