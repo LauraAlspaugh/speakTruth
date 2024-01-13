@@ -3,7 +3,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-dark" id="exampleModalLabel">Create Post</h5>
+                    <h5 class="modal-title text-dark" id="exampleModalLabel">Create a Post</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-dark">
@@ -11,7 +11,7 @@
                         <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
                             <input v-model="editable.title" type="text" required class="form-control" id="title"
-                                placeholder="Post title...">
+                                placeholder="Post Title...">
 
                         </div>
                         <div class="mb-3">
@@ -84,4 +84,17 @@ export default {
 </script>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.modal-footer {
+    background-color: #AAB7B8;
+}
+
+.modal-header {
+    background-color: #AAB7B8;
+}
+
+.modal-title {
+    font-family: 'Pinyon Script', cursive;
+    ;
+}
+</style>
