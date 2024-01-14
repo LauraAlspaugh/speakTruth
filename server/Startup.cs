@@ -36,6 +36,9 @@ public class Startup
 
     services.AddScoped<PostsRepository>();
     services.AddScoped<PostsService>();
+
+    services.AddScoped<CommentsRepository>();
+    services.AddScoped<CommentsService>();
   }
 
   private void ConfigureCors(IServiceCollection services)

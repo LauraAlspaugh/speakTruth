@@ -6,7 +6,26 @@
                 <p class="text-center fs-1 post-title">{{ post.title }}</p>
                 <p class="text-center">{{ post.body }}</p>
             </div>
-
+        </section>
+        <section class="row justify-content-evenly">
+            <div class="col-7 text-center mb-3">
+                <p class="fs-5 comment-line ">Comments</p>
+                <form @submit.prevent="createComment()">
+                    <p class="fs-5"></p>
+                    <div class="mb-3">
+                        <label for="body" class="form-label"></label>
+                        <textarea v-model="editable.body" type="text" required rows="3" class="form-control" id="body"
+                            placeholder="Leave a comment..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Post</button>
+                </form>
+            </div>
+            <div v-for="comment in comments" :key="comment.id" class="col-7 comment-page p-2 mb-3">
+                <p class="text-center">{{ comment.body }}</p>
+                <p class="text-center d-flex justify-content-center">- {{ comment.creator.name }} at {{
+                    comment.createdAt }} </p>
+                <!-- <p class="text-center"> Written At: {{ comment.createdAt }}</p> -->
+            </div>
         </section>
     </div>
 </template>
@@ -15,14 +34,17 @@
 <script>
 import { useRoute } from 'vue-router';
 import { AppState } from '../AppState';
-import { computed, reactive, onMounted } from 'vue';
+import { computed, reactive, onMounted, ref } from 'vue';
 import { logger } from '../utils/Logger.js';
 import Pop from '../utils/Pop.js';
 import { postsService } from '../services/PostsService.js';
+import { commentsService } from '../services/CommentsService.js';
 export default {
     setup() {
+        const editable = ref({})
         onMounted(() => {
             getPostById()
+            getCommentsByPostId()
         })
         const route = useRoute()
         async function getPostById() {
@@ -35,10 +57,31 @@ export default {
                 Pop.error(error);
             }
         }
+        async function getCommentsByPostId() {
+            try {
+                const postId = route.params.postId;
+                await commentsService.getCommentsByPostId(postId);
+            }
+            catch (error) {
+                logger.error(error);
+            }
+        }
         return {
+            editable,
             route,
             account: computed(() => AppState.account),
-            post: computed(() => AppState.activePost)
+            post: computed(() => AppState.activePost),
+            comments: computed(() => AppState.comments),
+            async createComment() {
+                try {
+                    const commentData = editable.value
+                    commentData.postId = route.params.postId
+                    await commentsService.createComment(commentData)
+                } catch (error) {
+                    logger.error(error)
+                    Pop.error(error)
+                }
+            },
         }
     }
 };
@@ -62,5 +105,16 @@ img {
 
 .post-title {
     font-family: 'Pinyon Script', cursive;
+}
+
+.comment-line {
+    border-bottom: solid black 1px;
+
+
+}
+
+.comment-page {
+    border: 1px solid black;
+    border-radius: 7px;
 }
 </style>
