@@ -2,6 +2,7 @@
     <div class="container-fluid post-details m-4">
         <section v-if="post" class="row justify-content-evenly">
             <div class="col-8 p-4">
+                <p class="fs-5 p-2">{{ post.createdAt }}</p>
                 <img class="img-fluid" :src="post.img" alt="post image">
                 <p class="text-center fs-1 post-title">{{ post.title }}</p>
                 <p class="text-center">{{ post.body }}</p>
@@ -9,7 +10,7 @@
         </section>
         <section class="row justify-content-evenly">
             <div class="col-7 text-center mb-3">
-                <p class="fs-5 comment-line ">Comments</p>
+                <p class="fs-4 comment-line ">Comments</p>
                 <form @submit.prevent="createComment()">
                     <p class="fs-5"></p>
                     <div class="mb-3">
@@ -21,8 +22,8 @@
                 </form>
             </div>
             <div v-for="comment in comments" :key="comment.id" class="col-7 comment-page p-2 mb-3">
-                <p class="text-center">{{ comment.body }}</p>
-                <p class="text-center d-flex justify-content-center">- {{ comment.creator.name }} at {{
+                <p class="comment-content">...{{ comment.body }}</p>
+                <p>- {{ comment.creator.name }} at {{
                     comment.createdAt }} </p>
                 <!-- <p class="text-center"> Written At: {{ comment.createdAt }}</p> -->
             </div>
@@ -109,12 +110,16 @@ img {
 
 .comment-line {
     border-bottom: solid black 1px;
-
+    font-family: 'Courier New', Courier, monospace;
 
 }
 
 .comment-page {
-    border: 1px solid black;
-    border-radius: 7px;
+    // border: 1px solid black;
+    // border-radius: 7px;
+}
+
+.comment-content {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 </style>
