@@ -26,6 +26,7 @@
           hic nobis odio maxime architecto non similique dolorum fugit, quisquam reiciendis tempora, dignissimos quas
           excepturi ratione in ipsa vitae? Aperiam nostrum eaque, exercitationem eos laborum architecto enim, velit
           officia provident blanditiis aspernatur.</p>
+        <p class="fs-5">Questions? Email me @ exampleemail24.com</p>
       </div>
     </section>
   </div>

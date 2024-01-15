@@ -6,7 +6,7 @@
     <router-view />
   </main>
   <footer class="bg-light text-dark">
-    <p class="m-5 fs-5"><i class="mdi mdi-copyright"></i> 2023 by Laura Alspaugh.</p>
+    <p class="m-5 fs-5"><i class="mdi mdi-copyright"></i> 2024 by Laura Alspaugh.</p>
   </footer>
 </template>
 
