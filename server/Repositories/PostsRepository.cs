@@ -2,6 +2,7 @@
 
 
 
+
 namespace speakTruth.Repositories;
 public class PostsRepository
 {
@@ -31,6 +32,19 @@ public class PostsRepository
              return post;
          }, postData).FirstOrDefault();
         return post;
+    }
+
+    internal void DestroyPost(int postId)
+    {
+        string sql = @"
+DELETE FROM posts WHERE id = @postId LIMIT 1;
+SELECT pos.*,
+    acc.*
+    FROM posts pos
+    JOIN accounts acc ON pos.creatorId = acc.id
+    Where pos.id = @postId;
+";
+        _db.Execute(sql, new { postId });
     }
 
     internal Post EditPost(Post post)

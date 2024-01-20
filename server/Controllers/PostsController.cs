@@ -88,4 +88,21 @@ public class PostsController : ControllerBase
             return BadRequest(error.Message);
         }
     }
+    [Authorize]
+    [HttpDelete("{postId}")]
+    public async Task<ActionResult<string>> DestroyPost(int postId)
+    {
+        try
+        {
+            Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
+            string userId = userInfo.Id;
+            string message = _postsService.DestroyPost(postId, userId);
+            return Ok(message);
+        }
+        catch (Exception error)
+        {
+
+            return BadRequest(error.Message);
+        }
+    }
 }

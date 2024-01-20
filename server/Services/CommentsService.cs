@@ -1,5 +1,6 @@
 
 
+
 namespace speakTruth.Services;
 public class CommentsService
 {
@@ -15,6 +16,8 @@ public class CommentsService
         Comment comment = _commentsRepository.CreateComment(commentData);
         return comment;
     }
+
+
 
     internal List<Comment> GetCommentsByPostId(int postId)
     {

@@ -17,6 +17,17 @@ public class PostsService
         return post;
     }
 
+    internal string DestroyPost(int postId, string userId)
+    {
+        Post post = GetPostById(postId);
+        if (post.CreatorId != userId)
+        {
+            throw new Exception("not yours to destroy!");
+        }
+        _postsRepository.DestroyPost(postId);
+        return "it is gone";
+    }
+
     internal Post EditPost(int postId, string id, Post postData)
     {
         Post post = GetPostById(postId);
