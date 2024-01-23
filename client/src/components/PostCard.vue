@@ -40,7 +40,7 @@ export default {
 
 img {
     width: 100%;
-    border-radius: 7px;
+    border-radius: 7px 7px 0px 0px;
     height: 300px;
     object-fit: cover;
     position: center;
