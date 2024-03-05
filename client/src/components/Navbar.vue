@@ -15,15 +15,16 @@
       <ul class="navbar-nav me-auto">
 
         <li>
-          <router-link :to="{ name: 'About' }" class="btn text-dark about-page fs-5 lighten-30 selectable text-uppercase">
+          <router-link :to="{ name: 'About' }"
+            class="btn text-dark about-page fs-5 lighten-30 selectable text-uppercase">
             About
           </router-link>
 
         </li>
       </ul>
       <div>
-        <button class="btn text-light" @click="toggleTheme"><i class="mdi"
-            :class="theme == 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'"></i></button>
+        <!-- <button class="btn text-light" @click="toggleTheme"><i class="mdi"
+            :class="theme == 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'"></i></button> -->
       </div>
       <Login />
       <PostModal />
