@@ -7,7 +7,7 @@
 
         </div>
         <div class="col-12">
-            <p class="m-2 fs-4 post-name text-center text-dark">{{ postProp.title }}</p>
+            <p class="m-2 fs-3 post-name text-center text-dark">{{ postProp.title }}</p>
             <p class="m-2 p-4">{{ postProp.shortBody }}...</p>
         </div>
 
@@ -48,6 +48,6 @@ img {
 
 .post-name {
 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive;
 }
 </style>

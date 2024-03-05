@@ -1,18 +1,18 @@
 <template>
   <div class="container-fluid">
-    <section class="row justify-content-center">
+    <!-- <section class="row justify-content-center">
       <div class="col-8">
 
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-          <!-- Indicators/dots -->
+
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
             <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
             <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
           </div>
 
-          <!-- The slideshow/carousel -->
+
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
@@ -31,7 +31,7 @@
             </div>
           </div>
 
-          <!-- Left and right controls/icons -->
+
           <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
             <span class="carousel-control-prev-icon text-dark"></span>
           </button>
@@ -40,7 +40,7 @@
           </button>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="row">
       <div class="col-12 mt-3">
