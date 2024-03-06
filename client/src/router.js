@@ -17,6 +17,21 @@ const routes = [
     component: loadPage('AboutPage')
   },
   {
+    path: '/blog',
+    name: 'The Blog',
+    component: loadPage('BlogPage')
+  },
+  {
+    path: '/poetry',
+    name: 'Poetry',
+    component: loadPage('PoetryPage')
+  },
+  {
+    path: '/songs',
+    name: 'Songs',
+    component: loadPage('SongsPage')
+  },
+  {
     path: '/post/:postId',
     name: 'Post',
     component: loadPage('PostDetailsPage')

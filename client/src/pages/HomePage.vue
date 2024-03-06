@@ -1,56 +1,19 @@
 <template>
   <div class="container-fluid">
-    <!-- <section class="row justify-content-center">
-      <div class="col-8">
+    <section class="row justify-content-center">
+      <div class="col-7 mt-5 main-details">
+        <div class="main-details">
 
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-          </div>
-
-
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="https://images.unsplash.com/photo-1553002401-c0945c2ff0b0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHF1b3Rlc3xlbnwwfHwwfHx8MA%3D%3D"
-                alt="Los Angeles" class="d-block" style="width:100%">
-            </div>
-            <div class="carousel-item">
-              <img
-                src="https://plus.unsplash.com/premium_photo-1671028545797-cc0b7b6e765c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njl8fHF1b3Rlc3xlbnwwfHwwfHx8MA%3D%3D"
-                alt="Chicago" class="d-block" style="width:100%">
-            </div>
-            <div class="carousel-item">
-              <img
-                src="https://images.unsplash.com/photo-1544137438-80d945567bd1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjEyfHxxdW90ZXN8ZW58MHx8MHx8fDA%3D"
-                alt="New York" class="d-block" style="width:100%">
-            </div>
-          </div>
-
-
-          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon text-dark"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
+          <p class="fs-5 text-center sub-truth">Thoughts from my perspective. From me to you.</p>
+          <p class="truth-title text-center">Speak Truth Today </p>
         </div>
-      </div>
-    </section> -->
-
-    <section class="row">
-      <div class="col-12 mt-3">
-        <p class="fs-5 text-center sub-truth">Thoughts from my perspective. From me to you.</p>
-        <p class="truth-title text-center">Speak Truth Today </p>
       </div>
     </section>
     <section class="row justify-content-evenly">
-      <div v-for="post in posts" :key="post.id" class="col-md-7 col-12 mb-5">
-        <PostCard :postProp="post" />
+      <div class="col-6 ">
+        <p class="fs-4"><i class="mdi mdi-format-quote-open"></i>Don't sit down and wait for the opportunities to come.
+          Get up and
+          make them.<i class="mdi mdi-format-quote-close"></i> </p>
       </div>
     </section>
   </div>
@@ -104,6 +67,12 @@ img {
   border-radius: 7px;
   justify-content: center;
   border: 1px solid black;
+}
+
+.main-details {
+  background-color: light gray;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
 }
 
 .carousel-control-next {

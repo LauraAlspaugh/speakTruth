@@ -21,6 +21,27 @@
           </router-link>
 
         </li>
+        <li>
+          <router-link :to="{ name: 'The Blog' }"
+            class="btn text-dark about-page fs-5 lighten-30 selectable text-uppercase">
+            The Blog
+          </router-link>
+
+        </li>
+        <li>
+          <router-link :to="{ name: 'Poetry' }"
+            class="btn text-dark about-page fs-5 lighten-30 selectable text-uppercase">
+            Poetry
+          </router-link>
+
+        </li>
+        <li>
+          <router-link :to="{ name: 'Songs' }"
+            class="btn text-dark about-page fs-5 lighten-30 selectable text-uppercase">
+            Songs
+          </router-link>
+
+        </li>
       </ul>
       <div>
         <!-- <button class="btn text-light" @click="toggleTheme"><i class="mdi"
