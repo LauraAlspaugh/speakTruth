@@ -37,6 +37,11 @@ const routes = [
     component: loadPage('PostDetailsPage')
   },
   {
+    path: '/poem/:poemId',
+    name: 'Poem',
+    component: loadPage('PoemDetailsPage')
+  },
+  {
     path: '/account',
     name: 'Account',
     component: loadPage('AccountPage'),

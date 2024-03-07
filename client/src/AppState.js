@@ -7,5 +7,7 @@ export const AppState = reactive({
   account: {},
   posts: [],
   activePost: null,
-  comments: []
+  comments: [],
+  poems: [],
+  activePoem: null
 })
