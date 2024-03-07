@@ -39,6 +39,13 @@ public class Startup
 
     services.AddScoped<CommentsRepository>();
     services.AddScoped<CommentsService>();
+
+    services.AddScoped<PoetryRepository>();
+    services.AddScoped<PoetryService>();
+
+    services.AddScoped<SongsRepository>();
+    services.AddScoped<SongsService>();
+
   }
 
   private void ConfigureCors(IServiceCollection services)
