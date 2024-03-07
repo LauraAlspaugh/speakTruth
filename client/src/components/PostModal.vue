@@ -17,32 +17,18 @@
                         <div class="mb-3">
                             <label for="imageUrl" class="form-label">Image</label>
                             <input v-model="editable.img" type="url" required class="form-control" id="imgUrl"
-                                placeholder="Post Image Url...">
+                                placeholder="Image Url...">
                         </div>
                         <div class="mb-3">
                             <label for="body" class="form-label">Body</label>
                             <textarea v-model="editable.body" rows="5" type="text-area" required class="form-control"
                                 id="body" placeholder="Post Body..."></textarea>
-
                         </div>
-
-                        <!-- <div class="mb-3">
-                            <label for="category" class="form-label">Category</label>
-                            <select v-model="editable.type" type="text" required class="form-select" id="category"
-                                placeholder="Event Category...">
-                                <option :value="category" v-for="category in categories" :key="category">
-                                    {{ category }}
-                                </option>
-                            </select>
-                        </div> -->
-
                         <button type="submit" class="btn btn-outline-dark">Submit</button>
                     </form>
 
                 </div>
                 <div class="modal-footer">
-                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button> -->
                 </div>
             </div>
         </div>

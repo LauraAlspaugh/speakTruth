@@ -1,21 +1,26 @@
 <template>
   <div class="container-fluid">
-    <section class="row justify-content-center">
-      <div class="col-7 mt-5 main-details">
-        <div class="main-details">
+    <section class="row mt-5">
+      <div class="col-12">
 
-          <p class="fs-5 text-center sub-truth">Thoughts from my perspective. From me to you.</p>
-          <p class="truth-title text-center">Speak Truth Today </p>
+      </div>
+    </section>
+    <section class="row justify-content-center mt-5">
+      <div class="col-7 mt-5 main-details">
+        <div class="">
+
+          <p class="fs-5 text-center sub-truth mt-5">Thoughts from my perspective. From me to you.</p>
+          <p class="truth-title text-center mb-5">Speak Truth Today </p>
         </div>
       </div>
     </section>
-    <section class="row justify-content-evenly">
+    <!-- <section class="row justify-content-evenly">
       <div class="col-6 ">
         <p class="fs-4"><i class="mdi mdi-format-quote-open"></i>Don't sit down and wait for the opportunities to come.
           Get up and
           make them.<i class="mdi mdi-format-quote-close"></i> </p>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -72,10 +77,8 @@ img {
 .main-details {
   background-color: light gray;
   border-radius: 10px;
-  backdrop-filter: blur(15px);
-}
-
-.carousel-control-next {
-  color: black;
+  backdrop-filter: blur(12px);
+  border: 1px solid gray;
+  padding: 5px;
 }
 </style>

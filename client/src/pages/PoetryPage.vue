@@ -1,5 +1,11 @@
 <template>
-    <p>the poetry page! </p>
+    <div class="container-fluid">
+        <section class="row mt-5">
+            <div class="col-12">
+                <p class="fs-1 text-center feed-text">The Feed.</p>
+            </div>
+        </section>
+    </div>
 </template>
 
 
@@ -14,4 +20,8 @@ export default {
 </script>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.feed-text {
+    font-family: cursive;
+}
+</style>
