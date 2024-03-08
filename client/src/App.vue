@@ -5,7 +5,7 @@
   <main>
     <router-view />
   </main>
-  <footer class="bg-light text-dark">
+  <footer class="text-dark">
     <p class="m-5 fs-5"><i class="mdi mdi-copyright"></i> 2024 by Laura Alspaugh.</p>
   </footer>
 </template>
@@ -36,5 +36,7 @@ footer {
   display: grid;
   place-content: center;
   height: 32px;
+  background-color: light gray;
+  backdrop-filter: blur(12px);
 }
 </style>

@@ -60,8 +60,11 @@ img {
 
 .poem-title {
     position: absolute;
+    margin-left: auto;
+    margin-right: auto;
     top: 15px;
-    left: 110px;
+    left: 0;
+    right: 0;
     text-shadow: 2px 2px 4px #000000;
     font-family: cursive;
 }
