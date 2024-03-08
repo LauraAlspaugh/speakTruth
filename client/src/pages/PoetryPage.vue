@@ -7,11 +7,15 @@
         </section>
         <section class="row justify-content-evenly mb-3">
             <div v-for="poem in poems" :key="poem.id" class=" col-md-3 col-12 mb-5 poem-image">
-                <img class="img-fluid" :src="poem.img" alt="image of poem">
-                <p class="poem-title fs-5 text-center">{{ poem.title }}</p>
+                <!-- <router-link :to="{ name: 'Poem', params: { poemId: poem.id } }"> -->
+                <img @click="setActivePoem(poem)" data-bs-toggle="modal" data-bs-target="#poemModal" type="button"
+                    class="img-fluid" :src="poem.img" alt="image of poem">
+                <p class="poem-title fs-5 text-center text-dark">{{ poem.title }}</p>
+                <!-- </router-link> -->
             </div>
         </section>
     </div>
+    <ActivePoemModal />
 </template>
 
 
@@ -21,6 +25,7 @@ import { computed, reactive, onMounted } from 'vue';
 import Pop from '../utils/Pop.js';
 import { logger } from '../utils/Logger.js';
 import { poetryService } from '../services/PoetryService.js';
+import ActivePoemModal from '../components/ActivePoemModal.vue';
 export default {
     setup() {
         onMounted(() => {
@@ -36,9 +41,14 @@ export default {
             }
         }
         return {
-            poems: computed(() => AppState.poems)
+            poems: computed(() => AppState.poems),
+            setActivePoem(poem) {
+
+                poetryService.setActivePoem(poem)
+            },
         }
-    }
+    },
+    components: { ActivePoemModal }
 };
 </script>
 

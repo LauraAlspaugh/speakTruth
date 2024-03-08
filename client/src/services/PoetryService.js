@@ -16,5 +16,11 @@ async createPoem(poemData){
     AppState.poems.push(newPoem)
     return newPoem
 }
+async setActivePoem(poem) {
+    const res = await api.get(`api/poetry/${poem.id}`)
+    logger.log('getting keep by id', res.data)
+
+    AppState.activePoem = poem
+}
 } 
 export const poetryService = new PoetryService()
