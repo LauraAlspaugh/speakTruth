@@ -51,14 +51,14 @@ export default {
         return {
             songs: computed(() => AppState.songs),
             editable,
-            async createPoem() {
+            async createSong() {
                 try {
                     const songData = editable.value
-                    const poem = await songsService.createPoem(songData)
+                    const poem = await songsService.createSong(songData)
                     Pop.success('Song Created!')
                     editable.value = {}
                     Modal.getOrCreateInstance("#createSongModal").hide()
-                    router.push({ name: "Song", params: { songId: song.id } })
+                    router.push({ name: "Songs", params: { songs } })
                 } catch (error) {
                     logger.error(error)
                     Pop
