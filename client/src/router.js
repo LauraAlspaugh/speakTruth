@@ -42,6 +42,11 @@ const routes = [
     component: loadPage('PoemDetailsPage')
   },
   {
+    path: '/song/:songId',
+    name: 'Song',
+    component: loadPage('SongDetailsPage')
+  },
+  {
     path: '/account',
     name: 'Account',
     component: loadPage('AccountPage'),

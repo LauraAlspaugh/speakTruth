@@ -9,5 +9,7 @@ export const AppState = reactive({
   activePost: null,
   comments: [],
   poems: [],
-  activePoem: null
+  activePoem: null,
+  songs: [],
+  activeSong: null
 })

@@ -27,6 +27,10 @@
               data-bs-toggle="modal" data-bs-target="#createPoemModal">
               Share Poem
             </div>
+            <div type="button" role="button" class="list-group-item dropdown-item list-group-item-action"
+              data-bs-toggle="modal" data-bs-target="#createSongModal">
+              Share Song
+            </div>
             <div class="list-group-item dropdown-item list-group-item-action text-danger selectable" @click="logout">
               <i class="mdi mdi-logout"></i>
               logout

@@ -50,6 +50,7 @@
       <Login />
       <PostModal />
       <PoemModal />
+      <SongModal />
     </div>
   </nav>
 </template>
@@ -60,6 +61,7 @@ import { loadState, saveState } from '../utils/Store.js';
 import Login from './Login.vue';
 import PostModal from './PostModal.vue';
 import PoemModal from './PoemModal.vue';
+import SongModal from './SongModal.vue';
 export default {
   setup() {
 
@@ -78,7 +80,7 @@ export default {
       }
     }
   },
-  components: { Login, PostModal, PoemModal }
+  components: { Login, PostModal, PoemModal, SongModal }
 }
 </script>
 
