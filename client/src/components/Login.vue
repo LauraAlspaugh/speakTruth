@@ -19,16 +19,19 @@
                 Manage Account
               </div>
             </router-link>
-            <div type="button" role="button" class="list-group-item dropdown-item list-group-item-action"
-              data-bs-toggle="modal" data-bs-target="#createPostModal">
+            <div type="button" role="button" title="create a post"
+              class="list-group-item dropdown-item list-group-item-action" data-bs-toggle="modal"
+              data-bs-target="#createPostModal">
               Create Post
             </div>
-            <div type="button" role="button" class="list-group-item dropdown-item list-group-item-action"
-              data-bs-toggle="modal" data-bs-target="#createPoemModal">
+            <div type="button" role="button" title="share a poem"
+              class="list-group-item dropdown-item list-group-item-action" data-bs-toggle="modal"
+              data-bs-target="#createPoemModal">
               Share Poem
             </div>
-            <div type="button" role="button" class="list-group-item dropdown-item list-group-item-action"
-              data-bs-toggle="modal" data-bs-target="#createSongModal">
+            <div type="button" role="button" title="share a song"
+              class="list-group-item dropdown-item list-group-item-action" data-bs-toggle="modal"
+              data-bs-target="#createSongModal">
               Share Song
             </div>
             <div class="list-group-item dropdown-item list-group-item-action text-danger selectable" @click="logout">

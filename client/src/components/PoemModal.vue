@@ -10,19 +10,19 @@
                     <form @submit.prevent="createPoem()">
                         <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
-                            <input v-model="editable.title" type="text" required class="form-control" id="title"
-                                placeholder="Poem Title...">
+                            <input v-model="editable.title" type="text" required maxlength="100" class="form-control"
+                                id="title" placeholder="Poem Title...">
 
                         </div>
                         <div class="mb-3">
                             <label for="imageUrl" class="form-label">Image</label>
-                            <input v-model="editable.img" type="url" required class="form-control" id="imgUrl"
-                                placeholder="Image Url...">
+                            <input v-model="editable.img" type="url" required class="form-control" maxlength="1000"
+                                id="imgUrl" placeholder="Image Url...">
                         </div>
                         <div class="mb-3">
                             <label for="body" class="form-label">Body</label>
-                            <textarea v-model="editable.body" rows="5" type="text-area" required class="form-control"
-                                id="body" placeholder="Poem Body..."></textarea>
+                            <textarea v-model="editable.body" rows="5" type="text-area" maxlength="1000" required
+                                class="form-control" id="body" placeholder="Poem Body..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-outline-dark">Submit</button>
                     </form>
