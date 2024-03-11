@@ -6,12 +6,14 @@
             </div>
         </section>
         <section class="row justify-content-evenly mt-5">
-            <div v-for="song in songs" :key="song.id" class="col-12 col-md-5 mb-3 song-image">
-                <img class="img-fluid" :src="song.img" alt="image of song">
+            <div v-for="song in songs" :key="song.id" class="col-12 col-md-3 mb-3 song-image">
+                <img @click="setActiveSong(song)" data-bs-toggle="modal" data-bs-target="#songModal" type="button"
+                    class="img-fluid" :src="song.img" alt="image of song">
                 <p class="song-title text-center fs-3">{{ song.title }}</p>
             </div>
         </section>
     </div>
+    <ActiveSongModal />
 </template>
 
 
@@ -21,6 +23,7 @@ import { computed, reactive, onMounted } from 'vue';
 import { logger } from '../utils/Logger.js';
 import Pop from '../utils/Pop.js';
 import { songsService } from '../services/SongsService.js';
+import ActiveSongModal from '../components/ActiveSongModal.vue';
 export default {
     setup() {
         onMounted(() => {
@@ -36,9 +39,14 @@ export default {
             }
         }
         return {
-            songs: computed(() => AppState.songs)
+            songs: computed(() => AppState.songs),
+            setActiveSong(song) {
+
+                songsService.setActiveSong(song)
+            },
         }
-    }
+    },
+    components: { ActiveSongModal }
 };
 </script>
 
@@ -50,7 +58,7 @@ export default {
 
 img {
     width: 100%;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
     position: center;
     border-radius: 3px;

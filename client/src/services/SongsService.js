@@ -16,5 +16,11 @@ class SongsService{
       logger.log('getting songs!', res.data)
       AppState.songs = res.data.map(pojo => new Song(pojo))
    }
+   async setActiveSong(song) {
+      const res = await api.get(`api/songs/${song.id}`)
+      logger.log('getting song by id', res.data)
+  
+      AppState.activeSong = song
+  }
 }
 export const songsService = new SongsService()

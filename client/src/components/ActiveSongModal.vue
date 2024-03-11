@@ -1,12 +1,12 @@
 <template>
-    <div v-if="poem" class="modal fade" id="poemModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div v-if="song" class="modal fade" id="songModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog  modal-lg">
             <div class="modal-content">
                 <div class="modal-body p-0">
                     <button type="button" class="btn-close modal-close " data-bs-dismiss="modal"
                         aria-label="Close"></button>
-                    <img class="img-fluid" :src="poem.img" alt="poem image">
+                    <img class="img-fluid" :src="song.img" alt="song image">
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@ import { computed, reactive, onMounted } from 'vue';
 export default {
     setup() {
         return {
-            poem: computed(() => AppState.activePoem)
+            song: computed(() => AppState.activeSong)
         }
     }
 };
@@ -31,6 +31,10 @@ export default {
 img {
     position: relative;
     border-radius: 7px;
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    position: center;
 }
 
 .modal-dialog {

@@ -18,7 +18,7 @@ async createPoem(poemData){
 }
 async setActivePoem(poem) {
     const res = await api.get(`api/poetry/${poem.id}`)
-    logger.log('getting keep by id', res.data)
+    logger.log('getting poem by id', res.data)
 
     AppState.activePoem = poem
 }
