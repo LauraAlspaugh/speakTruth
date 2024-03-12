@@ -1,7 +1,7 @@
 <template>
-    <div class="container-fluid post-details m-4">
+    <div class="container-fluid post-details ">
         <section v-if="post" class="row justify-content-evenly">
-            <div class="col-8 p-4">
+            <div class="col-12 col-md-8 p-4">
                 <p class="fs-5 p-2 created-date">{{ post.createdAt }}</p>
                 <img class="img-fluid" :src="post.img" alt="post image">
                 <p class="text-center fs-1 post-title">{{ post.title }}</p>
@@ -10,7 +10,7 @@
             </div>
         </section>
         <section class="row justify-content-evenly">
-            <div class="col-7 text-center mb-3">
+            <div class="col-12 col-md-7 text-center mb-3">
                 <p class="fs-4 comment-line ">Comments</p>
                 <form @submit.prevent="createComment()">
                     <p class="fs-5"></p>
@@ -22,7 +22,7 @@
                     <button type="submit" class="btn btn-dark">Post</button>
                 </form>
             </div>
-            <div v-for="comment in comments" :key="comment.id" class="col-7 comment-page p-2 mb-3">
+            <div v-for="comment in comments" :key="comment.id" class="col-12 col-md-7 comment-page p-2 mb-3">
                 <p class="comment-content">...{{ comment.body }}</p>
                 <p>- {{ comment.creator.name }} at {{
             comment.createdAt }} </p>

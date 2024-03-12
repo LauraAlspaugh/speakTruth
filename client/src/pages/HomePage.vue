@@ -6,7 +6,7 @@
       </div>
     </section>
     <section class="row justify-content-center mt-5">
-      <div class="col-7 mt-5 main-details">
+      <div class=" col-12 col-md-7 mt-5 main-details">
         <div class="">
 
           <p class="fs-5 text-center sub-truth mt-5">Thoughts from my perspective. From me to you.</p>

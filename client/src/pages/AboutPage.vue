@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid about-details">
     <section class="row justify-content-evenly">
-      <div class="col-8 text-center">
+      <div class="col-12 col-md-8 text-center">
         <p class="fs-2 about-title">
           Behind Speak Truth.
         </p>
@@ -11,14 +11,17 @@
           excepturi possimus temporibus reiciendis, expedita dicta voluptates illum ducimus quis amet alias dolorem
           exercitationem dignissimos deserunt autem iste blanditiis optio pariatur adipisci deleniti? Consectetur, ab
           quod! Nulla quaerat iste voluptas quibusdam hic laudantium iure cum sequi nam reprehenderit repellat veniam
-          tenetur facere mollitia magnam, perspiciatis, blanditiis magni doloremque tempora molestias quis est. Possimus,
+          tenetur facere mollitia magnam, perspiciatis, blanditiis magni doloremque tempora molestias quis est.
+          Possimus,
           quibusdam excepturi.
         </p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo et porro quia, illum nemo perferendis doloremque
           veniam dolore rerum? Iste est fugit sunt, iure voluptate nemo hic autem officiis omnis magni neque ipsa minima
-          quisquam accusantium unde aut maiores magnam velit expedita obcaecati nesciunt molestiae quidem. Tempore quidem
-          provident fugit ipsum ipsam eos cupiditate consectetur ab officia sunt, odit unde nesciunt vel qui perspiciatis
+          quisquam accusantium unde aut maiores magnam velit expedita obcaecati nesciunt molestiae quidem. Tempore
+          quidem
+          provident fugit ipsum ipsam eos cupiditate consectetur ab officia sunt, odit unde nesciunt vel qui
+          perspiciatis
           nemo explicabo aspernatur excepturi debitis ex? Praesentium nihil repellat explicabo nisi. Eum, veritatis
           necessitatibus cupiditate dicta aliquam quasi eligendi. Accusantium, similique.
         </p>
